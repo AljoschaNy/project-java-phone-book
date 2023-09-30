@@ -39,6 +39,6 @@ public class PhoneBook {
     public String toString() {
         return "PhoneBook{" +
                 "contacts=" + contacts +
-                '}';
+                "\n}";
     }
 }
