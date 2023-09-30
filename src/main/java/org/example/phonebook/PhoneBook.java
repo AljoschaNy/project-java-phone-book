@@ -26,11 +26,19 @@ public class PhoneBook {
 
     public void editContact(String lastName, String fieldToEdit, String newEntry) {
         if(this.searchContact(lastName) != null) {
-            if(fieldToEdit.equals("first name")) {
+            if(fieldToEdit.equals("first name") || fieldToEdit.equals("firstName") || fieldToEdit.equals("firstname")) {
                 this.searchContact(lastName).setFirstName(newEntry);
+            } else if (fieldToEdit.equals("last name") || fieldToEdit.equals("lastName") || fieldToEdit.equals("lastname")) {
+                this.searchContact(lastName).setLastName(newEntry);
+            } else if (fieldToEdit.equals("phone number") || fieldToEdit.equals("phoneNumber") || fieldToEdit.equals("phonenumber")) {
+                this.searchContact(lastName).setPhoneNumber(newEntry);
+            } else if (fieldToEdit.equals("email")) {
+                this.searchContact(lastName).setEmail(newEntry);
+            } else if(fieldToEdit.equals("address")) {
+                this.searchContact(lastName).setAddress(newEntry);
             }
-            System.out.println("Contact has been edited");
         }
+        System.out.println("Contact has been edited");
     }
 
     public void deleteContact(String lastName) {
