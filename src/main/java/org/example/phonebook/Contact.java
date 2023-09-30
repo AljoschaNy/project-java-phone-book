@@ -3,7 +3,7 @@ package org.example.phonebook;
 import java.util.Objects;
 
 public class Contact {
-    private int id;
+    private final int id;
     private static int totalContacts = 0;
     private String firstName;
     private String lastName;
