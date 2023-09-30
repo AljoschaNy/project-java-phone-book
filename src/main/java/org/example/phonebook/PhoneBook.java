@@ -23,6 +23,17 @@ public class PhoneBook {
         return null;
     }
 
+    public void editContact(String lastName, String fieldToEdit, String newEntry) {
+        if(this.searchContact(lastName) == null) {
+            System.out.println("Can't find contact");
+        } else {
+            if(fieldToEdit.equals("first name")) {
+                this.searchContact(lastName).setFirstName(newEntry);
+            }
+            System.out.println("Contact has been edited");
+        }
+    }
+
     public List<Contact> getContacts() {
         return contacts;
     }
