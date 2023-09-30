@@ -34,7 +34,10 @@ public class PhoneBook {
     }
 
     public void deleteContact(String lastName) {
-
+        if(this.searchContact(lastName) != null) {
+            this.contacts.remove(this.searchContact(lastName));
+            System.out.println("Contact has been deleted");
+        }
     }
 
     public List<Contact> getContacts() {
