@@ -20,18 +20,21 @@ public class PhoneBook {
                 return contact;
             }
         }
+        System.out.println("Can't find contact");
         return null;
     }
 
     public void editContact(String lastName, String fieldToEdit, String newEntry) {
-        if(this.searchContact(lastName) == null) {
-            System.out.println("Can't find contact");
-        } else {
+        if(this.searchContact(lastName) != null) {
             if(fieldToEdit.equals("first name")) {
                 this.searchContact(lastName).setFirstName(newEntry);
             }
             System.out.println("Contact has been edited");
         }
+    }
+
+    public void deleteContact(String lastName) {
+
     }
 
     public List<Contact> getContacts() {
