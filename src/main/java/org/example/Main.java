@@ -12,6 +12,14 @@ public class Main {
         phoneBook1.addContact(new Contact("Max", "Mustermann","11111","max@mail.de","Address 4"));
         phoneBook1.addContact(new Contact("Marie", "Schulz","22222","marie@mail.de","Address 5"));
 
-        System.out.println(phoneBook1);
+        //System.out.println(phoneBook1.searchContact("Nyang"));
+        //System.out.println(phoneBook1);
+        //phoneBook1.editContact("Hansi1","first name","Tim");
+        //System.out.println(phoneBook1);
+        //phoneBook1.deleteContact("Müller");
+        //System.out.println(phoneBook1);
+        //phoneBook1.editContact("Schulz","email","testtest@gmail.com");
+        //System.out.println(phoneBook1);
+
     }
 }
